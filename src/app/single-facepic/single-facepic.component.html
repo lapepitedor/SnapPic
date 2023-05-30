@@ -1,0 +1,15 @@
+<div class="card snapped" [ngClass]="{snapped : buttonText==='Follow' }">
+<h2>{{ facepic.title }}</h2>
+<a routerLink="/facepic">Back</a>
+<p>Mis en ligne le {{ facepic.createdDate | date}} </p>
+<p *ngIf="facepic.location"> In {{facepic.location }}</p>
+<p>{{ facepic.description }}</p>
+<img [src]='facepic.imageUrl' [alt]="facepic.title"/>
+<p>
+  
+  <span [ngStyle]="{ color: 'rgb(0, ' + facepic.snaps + ', 0)' }">🤌 {{ facepic.snaps }}</span>
+
+  <button (click)="onAddSnap()" >{{buttonText}}</button> 
+</p>
+
+</div>

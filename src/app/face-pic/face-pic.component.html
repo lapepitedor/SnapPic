@@ -1,0 +1,8 @@
+<div class="card snapped" [ngClass]="{snapped : buttonText==='Follow' }">
+<h2>{{facepic.title |uppercase}}</h2>
+
+<p *ngIf="facepic.location"> {{facepic.location }}</p>
+<p>{{ facepic.description }}</p>
+<button (click)="onView()">View</button>
+
+</div>
